@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int fn(int a){
   if (a < 2) return 1;
   return a*fn(a-1);

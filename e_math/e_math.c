@@ -2,10 +2,10 @@ f(int a){
   a = (a < 2) ? 1 : a*f(a-1);
 }
 
-main(){
+main(n){
 float e = 0;
 
-for(int n=0;n<10;n++)e+=1.0/f(n);
+for(n--;n<10;)e+=1.0/f(n++);
 
 printf("%f", e);
 }

@@ -14,3 +14,7 @@ Makefile at top level to come.  Code in all directories should compile with `gcc
 ## Tricks Specific to Problems
 
 Here I'll put tricks specific to certain problems done, like using the half value in prime calculation
+
+## Ungolfed Source
+
+Not present yet, but I'll try to get human sensible source up soon!

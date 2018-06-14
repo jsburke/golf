@@ -1,5 +1,5 @@
 f(int a){
-  return (a < 2) ? 1 : a*f(a-1);
+  a = (a < 2) ? 1 : a*f(a-1);
 }
 
 main(){

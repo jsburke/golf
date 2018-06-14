@@ -8,6 +8,12 @@ return res;
 }
 
 main(){
-  if(palindrome(909)) printf("True\n");
-  else printf("False");
+int i=999, j = i;
+while(i){
+  while(j){
+    if(palindrome(i*j)){printf("largest palindrome is %d",i*j);return;}
+    j--;
+  }
+  i--;
+}
 }

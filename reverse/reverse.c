@@ -1,6 +1,6 @@
 #include"d.h"
-i,e,t;main(){
+i,e,t,l;main(){
 while(a[e++]);
 while(i<e){t=a[i];a[i++]=a[e];a[e--]=t;}
-for(i=0;i<10;i++)printf("%d\n",a[i]);
+for(i=0;i<l;)printf("%c\n",a[i++]);
 }

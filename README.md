@@ -8,13 +8,20 @@ Makefile at top level to come.  Code in all directories should compile with `gcc
 
 ## List of Golf Tricks in C
 
-- n in `main(n)`        : here, n will act as the normal `int argc`.  Thus, by calling `./my_binary` on the command line, n becomes 1
-- uninitialized globals : globals that are not initialized will default to 0
+- implicit `int` :  simply enumerating variables on a line, for example like `x,y,z;` will save three bytes by implying `int`
+- global implicit initialization : declaring `int` variables like above in global scope will set them to `0`
+- `main`'s `argc` to initialize  : declaring an `int` in `main`'s argument will default it as one if the binary is invoked as `./a.out`
+- implicit library includes : many libraries like `stdio` will be inluded by the compiler if functions like `printf` are used
+- `for(;COND;)` looping : `for` and `while` loops take up the same amount of bytes, but `for` is generally preferable since the semi-colons in it can eat others in regular code
+- serial assignment : variables set to the same value can save a little space via `x=y=z=0;` vs `x=0;y=0;z=0;`
+- assign to input param : when subfunctions that return a value are needed, `f(a){return 2<<a&3;}` can be converted into `f(a){a=2<<a&3;}` since the compiler will generally have the return value stored at the input
+- ternary operator : often is a tighter stand in for `if..else`
+- ternary condition as result : for some compilers (gcc) `a?:c` gives the same result as `a?a:c`.  This sits on the fact that only one of the results will be evaluated
 
 ## Tricks Specific to Problems
 
-Here I'll put tricks specific to certain problems done, like using the half value in prime calculation
+TBD
 
 ## Ungolfed Source
 
-Not present yet, but I'll try to get human sensible source up soon!
+Each problem will have an ungolfed, hopefully readable, source.  The golfed sources will be suffixed with a `_terse` in the filename.

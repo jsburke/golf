@@ -1,1 +1,1 @@
-s=2<<5,x,i;main(y){for(y=s;y--;puts(""))for(x=i=0;i<y|x+y<s;)printf(i++<y?" ":x++&y?"  ":"* ");}
+s=2<<5,x;main(y){for(y=s;y--;puts(""))for(x=0;x<y|x++<s;)printf(x<y?" ":x-y&y?"  ":"* ");}
